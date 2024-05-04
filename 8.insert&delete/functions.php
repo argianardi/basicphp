@@ -12,6 +12,7 @@
         return $rows;
     }
 
+    // Add Student
     function addStudent($data) {
         global $conn;
 
@@ -27,6 +28,14 @@
                     ('$nrp', '$nama', '$email', '$jurusan', '$gambar')
                 ";
         mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    }
+
+    // Delete Student
+    function deleteStudent($id) {
+        global $conn;
+        mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
 
         return mysqli_affected_rows($conn);
     }
