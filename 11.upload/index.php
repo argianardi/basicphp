@@ -48,6 +48,7 @@ if(isset($_POST["search"])) {
                 <a href="update.php?id=<?= $student["id"]; ?>">Ubah</a>|
                 <a href="delete.php?id=<?= $student["id"]; ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?');">Hapus</a>
             </td>
+            <td><img src="img/<?= $student["gambar"] ?>" alt="student image" width="50"></td>
             <td><?= $student["nrp"]; ?></td> 
             <td><?= $student["nama"]; ?></td> 
             <td><?= $student["email"]; ?></td> 
